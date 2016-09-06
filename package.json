@@ -1,0 +1,58 @@
+{
+  "name": "match-casing",
+  "version": "0.0.0",
+  "description": "Match the case of `value` to that of `base`",
+  "license": "MIT",
+  "keywords": [
+    "string",
+    "match",
+    "case",
+    "casing"
+  ],
+  "repository": "https://github.com/wooorm/match-casing.git",
+  "bugs": "https://github.com/wooorm/hast-util-to-html/issues",
+  "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
+  ],
+  "dependencies": {},
+  "files": [
+    "index.js"
+  ],
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "esmangle": "^1.0.1",
+    "nyc": "^8.1.0",
+    "remark": "^6.0.1",
+    "remark-cli": "^2.0.0",
+    "remark-preset-wooorm": "^1.0.0",
+    "tape": "^4.0.0",
+    "xo": "^0.16.0"
+  },
+  "scripts": {
+    "build-md": "remark . --quiet --frail",
+    "build-bundle": "browserify index.js --bare -s matchCasing > match-casing.js",
+    "build-mangle": "esmangle < match-casing.js > match-casing.min.js",
+    "build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+    "lint": "xo",
+    "test-api": "node test",
+    "test-coverage": "nyc --reporter lcov tape test.js",
+    "test": "npm run build && npm run lint && npm run test-coverage"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "lines": 100,
+    "functions": 100,
+    "branches": 100
+  },
+  "xo": {
+    "space": true,
+    "ignores": [
+      "match-casing.js"
+    ]
+  },
+  "remarkConfig": {
+    "output": true,
+    "presets": "wooorm"
+  }
+}

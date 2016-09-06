@@ -1,0 +1,7 @@
+.DS_Store
+*.log
+.nyc_output/
+coverage/
+node_modules/
+match-casing.js
+match-casing.min.js
