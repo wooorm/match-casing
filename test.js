@@ -1,18 +1,8 @@
-/**
- * @author Titus Wormer
- * @copyright 2016 Titus Wormer
- * @license MIT
- * @module match-casing
- * @fileoverview Test suite for `match-casing`.
- */
-
 'use strict';
 
-/* Dependencies. */
 var test = require('tape');
 var casing = require('./');
 
-/* Tests. */
 test('match-casing', function (t) {
   t.equal(casing('foo', 'BAZ'), 'FOO');
   t.equal(casing('foo', 'Baz'), 'Foo');

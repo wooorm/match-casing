@@ -1,11 +1,3 @@
-/**
- * @author Titus Wormer
- * @copyright 2016 Titus Wormer
- * @license MIT
- * @module match-casing
- * @fileoverview Match the case of `value` to that of `base`.
- */
-
 'use strict';
 
 module.exports = casing;
