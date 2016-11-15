@@ -9,8 +9,8 @@
     "case",
     "casing"
   ],
-  "repository": "https://github.com/wooorm/match-casing.git",
-  "bugs": "https://github.com/wooorm/hast-util-to-html/issues",
+  "repository": "https://github.com/wooorm/match-casing",
+  "bugs": "https://github.com/wooorm/match-casing/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
     "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
