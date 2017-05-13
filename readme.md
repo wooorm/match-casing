@@ -40,8 +40,8 @@ casing('’N’', 'a'); //=> '’n’'
 
 ###### Parameters
 
-*   `value` (`string`) — Value whose case to change.
-*   `match` (`string`) — Value whose case to match.
+*   `value` (`string`) — Value whose case to change
+*   `match` (`string`) — Value whose case to match
 
 ###### Returns
 
@@ -49,12 +49,12 @@ casing('’N’', 'a'); //=> '’n’'
 
 ## Algorithm
 
-*   If `base` is uppercase, `value` is uppercased;
-*   Else, if `base` is lowercase, `value` is lowercased;
+*   If `base` is uppercase, `value` is uppercased
+*   Else, if `base` is lowercase, `value` is lowercased
 *   Else, if the first alphabetic character in `base` is uppercase,
     and the rest of `base` is lowercase, uppercase the first alphabetic
-    character in `value` and lowercase the rest.
-*   Else, return `value` unmodified.
+    character in `value` and lowercase the rest
+*   Else, return `value` unmodified
 
 The third case, where `value` takes on a capitalised, deals with
 initial non-alphabetical characters as expected.
