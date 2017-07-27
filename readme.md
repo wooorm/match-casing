@@ -38,14 +38,7 @@ casing('’N’', 'a'); //=> '’n’'
 
 ### `matchCasing(value, base)`
 
-###### Parameters
-
-*   `value` (`string`) — Value whose case to change
-*   `match` (`string`) — Value whose case to match
-
-###### Returns
-
-`string` — `value`, but cased as `base`.
+Transform the case in `value` (`string`) to match that of `base` (`string`).
 
 ## Algorithm
 
