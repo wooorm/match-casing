@@ -9,16 +9,16 @@
     "case",
     "casing"
   ],
-  "repository": "https://github.com/wooorm/match-casing",
+  "repository": "wooorm/match-casing",
   "bugs": "https://github.com/wooorm/match-casing/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
     "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
   ],
-  "dependencies": {},
   "files": [
     "index.js"
   ],
+  "dependencies": {},
   "devDependencies": {
     "browserify": "^14.1.0",
     "esmangle": "^1.0.1",
@@ -52,6 +52,8 @@
     ]
   },
   "remarkConfig": {
-    "plugins": ["preset-wooorm"]
+    "plugins": [
+      "preset-wooorm"
+    ]
   }
 }
