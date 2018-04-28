@@ -1,7 +1,7 @@
 'use strict';
 
 var test = require('tape');
-var casing = require('./');
+var casing = require('.');
 
 test('match-casing', function (t) {
   t.equal(casing('foo', 'BAZ'), 'FOO');
