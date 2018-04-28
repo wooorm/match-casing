@@ -13,25 +13,25 @@ npm install match-casing
 ## Usage
 
 ```js
-var casing = require('match-casing');
+var casing = require('match-casing')
 
-casing('foo', 'BAZ'); //=> 'FOO'
-casing('foo', 'Baz'); //=> 'Foo'
-casing('foo', 'baz'); //=> 'foo'
-casing('foo', 'BaZ'); //=> 'foo'
+casing('foo', 'BAZ') // => 'FOO'
+casing('foo', 'Baz') // => 'Foo'
+casing('foo', 'baz') // => 'foo'
+casing('foo', 'BaZ') // => 'foo'
 
-casing('FOO', 'BAZ'); //=> 'FOO'
-casing('FOO', 'Baz'); //=> 'Foo'
-casing('FOO', 'baz'); //=> 'foo'
-casing('FOO', 'BaZ'); //=> 'FOO'
+casing('FOO', 'BAZ') // => 'FOO'
+casing('FOO', 'Baz') // => 'Foo'
+casing('FOO', 'baz') // => 'foo'
+casing('FOO', 'BaZ') // => 'FOO'
 
-casing('Foo', 'BAZ'); //=> 'FOO'
-casing('Foo', 'Baz'); //=> 'Foo'
-casing('Foo', 'baz'); //=> 'foo'
-casing('Foo', 'BaZ'); //=> 'Foo'
+casing('Foo', 'BAZ') // => 'FOO'
+casing('Foo', 'Baz') // => 'Foo'
+casing('Foo', 'baz') // => 'foo'
+casing('Foo', 'BaZ') // => 'Foo'
 
-casing('’90S', '’twas'); //=> '’90s'
-casing('’N’', 'a'); //=> '’n’'
+casing('’90S', '’twas') // => '’90s'
+casing('’N’', 'a') // => '’n’'
 ```
 
 ## API
