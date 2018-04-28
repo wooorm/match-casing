@@ -1,10 +1,11 @@
 language: node_js
 node_js:
-- '4.0'
-- '8.0'
+- lts/boron
+- node
 after_script: bash <(curl -s https://codecov.io/bash)
 deploy:
   provider: releases
+  skip_cleanup: true
   api_key:
     secure: FaAZq4Nh6u+p+6J/9OvRzGGsEszs+jrwTogdTR+q2fHGdHB57ZciCzoBHiVN47otbj5/w2y2xj1u+DrshYYXU8ky/zDPsz8Nz43uZrmSLkHt0cT9lwsxGANHEsLqIKQZeN7E780exjl9w0X0VtqWhF64B1ToXMZqUzdcwdPoIJmBsk7XJcXSQMkTze1yLFNoYaDjSE+uSZKZGQRCUgwlJE0G+1vTRq3yGS1QX9OW2v2qZz8sX1Q9NHDZyRnc7LUxetYGrV6+fwyFax+sb4LBp8cv5Trl8EJfkrE5OW0y/RXfgEU5ioWZLaC4PaExTVYKR7oFpDBzF8ytslYyjWdhYGJPvu8r6mDWAE7y5eHqblL+FMs0+6cHHXfLnpoWwwwUgeDVbzCxRKIujyLCN3o0ol4HjDi9zVI7lLErsSu2C7Jgo50D5pWz4MBHM/vkqQANDBNwLkvUtmRmmQmTETo9S6WqOlqILwHwlbpqIRvgSB6VLeSVFvpFFWYMfbMsvs+uqoyfDZUjrwanLLYKb9B+gKzRF4VObXoLLXESjuAsiOROCIWcT02edxkJc0sxY+EPGWNMKqUX1WTsgmWwf9MMzn5+dGOpXeDG2Ej+HkrzmmHjvvs1RHq1BoNKFJMSYIdgbYSP6BrLl+vh7OZ5uyLAtaqAyD5DRIDvDe0oAEFH3jU=
   file:
@@ -12,4 +13,3 @@ deploy:
     - "match-casing.min.js"
   on:
     tags: true
-    node: '8.0'
