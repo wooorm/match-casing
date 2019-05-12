@@ -1,15 +1,15 @@
 language: node_js
 node_js:
-- lts/boron
-- node
+  - lts/dubnium
+  - node
 after_script: bash <(curl -s https://codecov.io/bash)
 deploy:
   provider: releases
   skip_cleanup: true
   api_key:
-    secure: FaAZq4Nh6u+p+6J/9OvRzGGsEszs+jrwTogdTR+q2fHGdHB57ZciCzoBHiVN47otbj5/w2y2xj1u+DrshYYXU8ky/zDPsz8Nz43uZrmSLkHt0cT9lwsxGANHEsLqIKQZeN7E780exjl9w0X0VtqWhF64B1ToXMZqUzdcwdPoIJmBsk7XJcXSQMkTze1yLFNoYaDjSE+uSZKZGQRCUgwlJE0G+1vTRq3yGS1QX9OW2v2qZz8sX1Q9NHDZyRnc7LUxetYGrV6+fwyFax+sb4LBp8cv5Trl8EJfkrE5OW0y/RXfgEU5ioWZLaC4PaExTVYKR7oFpDBzF8ytslYyjWdhYGJPvu8r6mDWAE7y5eHqblL+FMs0+6cHHXfLnpoWwwwUgeDVbzCxRKIujyLCN3o0ol4HjDi9zVI7lLErsSu2C7Jgo50D5pWz4MBHM/vkqQANDBNwLkvUtmRmmQmTETo9S6WqOlqILwHwlbpqIRvgSB6VLeSVFvpFFWYMfbMsvs+uqoyfDZUjrwanLLYKb9B+gKzRF4VObXoLLXESjuAsiOROCIWcT02edxkJc0sxY+EPGWNMKqUX1WTsgmWwf9MMzn5+dGOpXeDG2Ej+HkrzmmHjvvs1RHq1BoNKFJMSYIdgbYSP6BrLl+vh7OZ5uyLAtaqAyD5DRIDvDe0oAEFH3jU=
+    secure: fmCq8CPbD30Qz4pZHQbnZsbywJM2zRT2mkLI6+X+Hh04j7zBZC2cwQXaYrl4X8HIQjyBbhN3OVl0faKHqRwtsSxb9wCELNBciHt45QnlFa8CWLDSvc7JfsTxwvmpYh/eeoKh7o4QY2BTjz1WI7Eyh/PfhyaQ6WlBQIAEuww2qVZki+JMupgbgL7YhBVo07On31dBsDxdJv2/T4ZlKQubR8jpAk/FyHqDBlhWMZEha8R8PGjOvoNlvhsktEdHILIzmckxJeb4++svi0MtFpr6U3hBpJuW1bs62RyVIFm5rJ7Oja89B/pFo5TiopM8KT+VbFMbIL0KA3qDHDe4HiboBe2MtodJCve2eQbnhlFMBcJl18BV+jambBh5Y5aG1ySJSRTfqyOjCu0/Zs1fvR2ppst2dOmRRwG7jRxRvO3X1ZlUa3F3LEHnGYv2jfnGPNeoKAAi/xyFzhVSIYVSD84PloVRbGUPaJ/0Hy28rQF7uvAI2xpu6lqG192j3lOylkfzlid5tk8kY9OZyOS2Zt+WjDQ0FA6TZakOPO7VXvKlgBndE1hVxEntyDtrQVBzl44952JVjQzsoyzrBCs9j+21vR7J3rbrYeZBnxL8drjAAr4H+IFTVYtSy6XPMkhkjOFxuyWMtweTgxo41qtR7n+HzpNMXmcHBrhyvKCHrcGHKWU=
   file:
-    - "match-casing.js"
-    - "match-casing.min.js"
+    - 'match-casing.js'
+    - 'match-casing.min.js'
   on:
     tags: true
