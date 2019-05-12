@@ -1,4 +1,9 @@
-# match-casing [![Build Status][travis-badge]][travis] [![Coverage Status][codecov-badge]][codecov]
+# match-casing
+
+[![Build][build-badge]][build]
+[![Coverage][coverage-badge]][coverage]
+[![Downloads][downloads-badge]][downloads]
+[![Size][size-badge]][size]
 
 Match the case of `value` to that of `base`.
 
@@ -58,13 +63,21 @@ initial non-alphabetical characters as expected.
 
 <!-- Definitions -->
 
-[travis-badge]: https://img.shields.io/travis/wooorm/match-casing.svg
+[build-badge]: https://img.shields.io/travis/wooorm/match-casing.svg
 
-[travis]: https://travis-ci.org/wooorm/match-casing
+[build]: https://travis-ci.org/wooorm/match-casing
 
-[codecov-badge]: https://img.shields.io/codecov/c/github/wooorm/match-casing.svg
+[coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/match-casing.svg
 
-[codecov]: https://codecov.io/github/wooorm/match-casing
+[coverage]: https://codecov.io/github/wooorm/match-casing
+
+[downloads-badge]: https://img.shields.io/npm/dm/match-casing.svg
+
+[downloads]: https://www.npmjs.com/package/match-casing
+
+[size-badge]: https://img.shields.io/bundlephobia/minzip/match-casing.svg
+
+[size]: https://bundlephobia.com/result?p=match-casing
 
 [npm-install]: https://docs.npmjs.com/cli/install
 
