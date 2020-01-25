@@ -7,15 +7,15 @@
 
 Match the case of `value` to that of `base`.
 
-## Installation
+## Install
 
-[npm][npm-install]:
+[npm][]:
 
-```bash
+```sh
 npm install match-casing
 ```
 
-## Usage
+## Use
 
 ```js
 var casing = require('match-casing')
@@ -54,8 +54,8 @@ Transform the case in `value` (`string`) to match that of `base` (`string`).
     character in `value` and lowercase the rest
 *   Else, return `value` unmodified
 
-The third case, where `value` takes on a capitalised, deals with
-initial non-alphabetical characters as expected.
+The third case, where `value` takes on a capitalized, deals with initial
+non-alphabetical characters as expected.
 
 ## License
 
@@ -79,7 +79,7 @@ initial non-alphabetical characters as expected.
 
 [size]: https://bundlephobia.com/result?p=match-casing
 
-[npm-install]: https://docs.npmjs.com/cli/install
+[npm]: https://docs.npmjs.com/cli/install
 
 [license]: license
 
