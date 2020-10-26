@@ -3,7 +3,7 @@
 var test = require('tape')
 var casing = require('.')
 
-test('match-casing', function(t) {
+test('match-casing', function (t) {
   t.equal(casing('foo', 'BAZ'), 'FOO')
   t.equal(casing('foo', 'Baz'), 'Foo')
   t.equal(casing('foo', 'baz'), 'foo')
