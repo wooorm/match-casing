@@ -63,9 +63,9 @@ non-alphabetical characters as expected.
 
 <!-- Definitions -->
 
-[build-badge]: https://img.shields.io/travis/wooorm/match-casing.svg
+[build-badge]: https://github.com/wooorm/match-casing/workflows/main/badge.svg
 
-[build]: https://travis-ci.org/wooorm/match-casing
+[build]: https://github.com/wooorm/match-casing/actions
 
 [coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/match-casing.svg
 
