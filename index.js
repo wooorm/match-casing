@@ -3,8 +3,7 @@
 module.exports = casing
 
 function casing(value, base) {
-  var length
-  var index
+  var index = -1
   var char
   var rest
   var cap
@@ -17,25 +16,20 @@ function casing(value, base) {
     return value.toLowerCase()
   }
 
-  length = base.length
-  index = -1
-
-  while (++index < length) {
+  while (++index < base.length) {
     char = base.charAt(index)
 
     if (char.toUpperCase() !== char.toLowerCase()) {
       rest = base.slice(index + 1)
-
       cap = char === char.toUpperCase() && rest === rest.toLowerCase()
       break
     }
   }
 
   if (cap) {
-    length = value.length
     index = -1
 
-    while (++index < length) {
+    while (++index < value.length) {
       char = value.charAt(index).toUpperCase()
 
       if (char !== char.toLowerCase()) {
