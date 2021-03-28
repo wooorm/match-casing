@@ -1,7 +1,17 @@
+/**
+ * Transform the case in `value` (`string`) to match that of `base` (`string`).
+ *
+ * @param {string} value
+ * @param {string} base
+ * @returns {string}
+ */
 export function matchCasing(value, base) {
   var index = -1
+  /** @type {string} */
   var char
+  /** @type {string} */
   var rest
+  /** @type {boolean} */
   var cap
 
   if (base.toUpperCase() === base) {
