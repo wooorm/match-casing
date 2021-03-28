@@ -1,6 +1,6 @@
 {
   "name": "match-casing",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Match the case of `value` to that of `base`",
   "license": "MIT",
   "keywords": [
