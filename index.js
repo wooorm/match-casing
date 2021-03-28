@@ -1,8 +1,4 @@
-'use strict'
-
-module.exports = casing
-
-function casing(value, base) {
+export function matchCasing(value, base) {
   var index = -1
   var char
   var rest

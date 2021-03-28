@@ -9,6 +9,9 @@ Match the case of `value` to that of `base`.
 
 ## Install
 
+This package is ESM only: Node 12+ is needed to use it and it must be `import`ed
+instead of `require`d.
+
 [npm][]:
 
 ```sh
@@ -18,28 +21,31 @@ npm install match-casing
 ## Use
 
 ```js
-var casing = require('match-casing')
+import {matchCasing} from 'match-casing'
 
-casing('foo', 'BAZ') // => 'FOO'
-casing('foo', 'Baz') // => 'Foo'
-casing('foo', 'baz') // => 'foo'
-casing('foo', 'BaZ') // => 'foo'
+matchCasing('foo', 'BAZ') // => 'FOO'
+matchCasing('foo', 'Baz') // => 'Foo'
+matchCasing('foo', 'baz') // => 'foo'
+matchCasing('foo', 'BaZ') // => 'foo'
 
-casing('FOO', 'BAZ') // => 'FOO'
-casing('FOO', 'Baz') // => 'Foo'
-casing('FOO', 'baz') // => 'foo'
-casing('FOO', 'BaZ') // => 'FOO'
+matchCasing('FOO', 'BAZ') // => 'FOO'
+matchCasing('FOO', 'Baz') // => 'Foo'
+matchCasing('FOO', 'baz') // => 'foo'
+matchCasing('FOO', 'BaZ') // => 'FOO'
 
-casing('Foo', 'BAZ') // => 'FOO'
-casing('Foo', 'Baz') // => 'Foo'
-casing('Foo', 'baz') // => 'foo'
-casing('Foo', 'BaZ') // => 'Foo'
+matchCasing('Foo', 'BAZ') // => 'FOO'
+matchCasing('Foo', 'Baz') // => 'Foo'
+matchCasing('Foo', 'baz') // => 'foo'
+matchCasing('Foo', 'BaZ') // => 'Foo'
 
-casing('’90S', '’twas') // => '’90s'
-casing('’N’', 'a') // => '’n’'
+matchCasing('’90S', '’twas') // => '’90s'
+matchCasing('’N’', 'a') // => '’n’'
 ```
 
 ## API
+
+This package exports the following identifiers: `matchCasing`.
+There is no default export.
 
 ### `matchCasing(value, base)`
 
