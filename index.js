@@ -6,13 +6,8 @@
  * @returns {string}
  */
 export function matchCasing(value, base) {
-  var index = -1
-  /** @type {string} */
-  var char
-  /** @type {string} */
-  var rest
-  /** @type {boolean} */
-  var cap
+  let index = -1
+  let cap = false
 
   if (base.toUpperCase() === base) {
     return value.toUpperCase()
@@ -23,10 +18,10 @@ export function matchCasing(value, base) {
   }
 
   while (++index < base.length) {
-    char = base.charAt(index)
+    const char = base.charAt(index)
 
     if (char.toUpperCase() !== char.toLowerCase()) {
-      rest = base.slice(index + 1)
+      const rest = base.slice(index + 1)
       cap = char === char.toUpperCase() && rest === rest.toLowerCase()
       break
     }
@@ -36,7 +31,7 @@ export function matchCasing(value, base) {
     index = -1
 
     while (++index < value.length) {
-      char = value.charAt(index).toUpperCase()
+      const char = value.charAt(index).toUpperCase()
 
       if (char !== char.toLowerCase()) {
         return (
