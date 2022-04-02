@@ -43,17 +43,17 @@ In Node.js (version 12.20+, 14.14+, or 16.0+), install with [npm][]:
 npm install match-casing
 ```
 
-In Deno with [Skypack][]:
+In Deno with [`esm.sh`][esmsh]:
 
 ```js
-import {matchCasing} from 'https://cdn.skypack.dev/match-casing@2?dts'
+import {matchCasing} from 'https://esm.sh/match-casing@2'
 ```
 
-In browsers with [Skypack][]:
+In browsers with [`esm.sh`][esmsh]:
 
 ```html
 <script type="module">
-  import {matchCasing} from 'https://cdn.skypack.dev/match-casing@2?min'
+  import {matchCasing} from 'https://esm.sh/match-casing@2?bundle'
 </script>
 ```
 
@@ -156,7 +156,7 @@ See [How to Contribute to Open Source][contribute].
 
 [npm]: https://docs.npmjs.com/cli/install
 
-[skypack]: https://www.skypack.dev
+[esmsh]: https://esm.sh
 
 [license]: license
 
