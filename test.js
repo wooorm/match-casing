@@ -1,29 +1,28 @@
-import test from 'tape'
+import assert from 'node:assert/strict'
+import test from 'node:test'
 import {matchCasing} from './index.js'
 
-test('matchCasing(value, base)', function (t) {
-  t.equal(matchCasing('foo', 'BAZ'), 'FOO')
-  t.equal(matchCasing('foo', 'Baz'), 'Foo')
-  t.equal(matchCasing('foo', 'baz'), 'foo')
-  t.equal(matchCasing('foo', 'BaZ'), 'foo')
+test('matchCasing(value, base)', function () {
+  assert.equal(matchCasing('foo', 'BAZ'), 'FOO')
+  assert.equal(matchCasing('foo', 'Baz'), 'Foo')
+  assert.equal(matchCasing('foo', 'baz'), 'foo')
+  assert.equal(matchCasing('foo', 'BaZ'), 'foo')
 
-  t.equal(matchCasing('FOO', 'BAZ'), 'FOO')
-  t.equal(matchCasing('FOO', 'Baz'), 'Foo')
-  t.equal(matchCasing('FOO', 'baz'), 'foo')
-  t.equal(matchCasing('FOO', 'BaZ'), 'FOO')
+  assert.equal(matchCasing('FOO', 'BAZ'), 'FOO')
+  assert.equal(matchCasing('FOO', 'Baz'), 'Foo')
+  assert.equal(matchCasing('FOO', 'baz'), 'foo')
+  assert.equal(matchCasing('FOO', 'BaZ'), 'FOO')
 
-  t.equal(matchCasing('Foo', 'BAZ'), 'FOO')
-  t.equal(matchCasing('Foo', 'Baz'), 'Foo')
-  t.equal(matchCasing('Foo', 'baz'), 'foo')
-  t.equal(matchCasing('Foo', 'BaZ'), 'Foo')
+  assert.equal(matchCasing('Foo', 'BAZ'), 'FOO')
+  assert.equal(matchCasing('Foo', 'Baz'), 'Foo')
+  assert.equal(matchCasing('Foo', 'baz'), 'foo')
+  assert.equal(matchCasing('Foo', 'BaZ'), 'Foo')
 
-  t.equal(matchCasing('’90S', '’twas'), '’90s')
-  t.equal(matchCasing('’90S', '’Twas'), '’90S')
-  t.equal(matchCasing('’90S', '’TWAS'), '’90S')
+  assert.equal(matchCasing('’90S', '’twas'), '’90s')
+  assert.equal(matchCasing('’90S', '’Twas'), '’90S')
+  assert.equal(matchCasing('’90S', '’TWAS'), '’90S')
 
-  t.equal(matchCasing('’N’', 'a'), '’n’')
-  t.equal(matchCasing('’N’', 'A'), '’N’')
-  t.equal(matchCasing('’N’', ''), '’N’')
-
-  t.end()
+  assert.equal(matchCasing('’N’', 'a'), '’n’')
+  assert.equal(matchCasing('’N’', 'A'), '’N’')
+  assert.equal(matchCasing('’N’', ''), '’N’')
 })
