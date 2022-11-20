@@ -15,8 +15,8 @@ Match the case of `value` to that of `base`.
 *   [Use](#use)
 *   [API](#api)
     *   [`matchCasing(value, base)`](#matchcasingvalue-base)
-*   [Types](#types)
 *   [Algorithm](#algorithm)
+*   [Types](#types)
 *   [Compatibility](#compatibility)
 *   [Security](#security)
 *   [Related](#related)
@@ -37,7 +37,7 @@ original.
 ## Install
 
 This package is [ESM only][esm].
-In Node.js (version 12.20+, 14.14+, or 16.0+), install with [npm][]:
+In Node.js (version 14.14+, 16.0+), install with [npm][]:
 
 ```sh
 npm install match-casing
@@ -83,33 +83,33 @@ matchCasing('’N’', 'a') // => '’n’'
 
 ## API
 
-This package exports the following identifier: `matchCasing`.
+This package exports the identifier `matchCasing`.
 There is no default export.
 
 ### `matchCasing(value, base)`
 
 Transform the case in `value` (`string`) to match that of `base` (`string`).
 
+## Algorithm
+
+*   if `base` is uppercase, `value` is uppercased
+*   else, if `base` is lowercase, `value` is lowercased
+*   else, if the first alphabetic character in `base` is uppercase,
+    and the rest of `base` is lowercase, uppercase the first alphabetic
+    character in `value` and lowercase the rest
+*   else, return `value` unmodified
+
+The third case deals with initial non-alphabetical characters as expected.
+
 ## Types
 
 This package is fully typed with [TypeScript][].
-There are no extra exported types.
-
-## Algorithm
-
-*   If `base` is uppercase, `value` is uppercased
-*   Else, if `base` is lowercase, `value` is lowercased
-*   Else, if the first alphabetic character in `base` is uppercase,
-    and the rest of `base` is lowercase, uppercase the first alphabetic
-    character in `value` and lowercase the rest
-*   Else, return `value` unmodified
-
-The third case deals with initial non-alphabetical characters as expected.
+It exports no additional types.
 
 ## Compatibility
 
 This package is at least compatible with all maintained versions of Node.js.
-As of now, that is Node.js 12.20+, 14.14+, and 16.0+.
+As of now, that is Node.js 14.14+ and 16.0+.
 It also works in Deno and modern browsers.
 
 ## Security
@@ -123,9 +123,9 @@ This package is safe.
 *   [`wooorm/emoticon`](https://github.com/wooorm/emoticon)
     — info on ASCII emoticons
 *   [`wooorm/strip-skin-tone`](https://github.com/wooorm/strip-skin-tone)
-    — Strip skin-tones from emoji
+    — strip skin-tones from emoji
 *   [`wooorm.com/checkmoji`](https://wooorm.com/checkmoji/)
-    — Check emoji across platforms
+    — check emoji across platforms
 
 ## Contribute
 
